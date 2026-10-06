@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>San Fausto 2026</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <p>FIESTAS 2026</p>
+        <h1>San Fausto<br>2026 🎉</h1>
+    </header>
+
+    <main class="content">
+
+    <!-- ================================
+         INICIO
+         ================================ -->
+
+    <section id="inicio" class="pantalla">
+
+       <section class="welcome">
+    <h2 id="bienvenida-usuario">¡Bienvenid@! 👋</h2>
+    <p>Todo lo que necesitas para disfrutar de las fiestas.</p>
+</section>
+
+        <section class="card">
+            <div class="card-title">Próximo evento</div>
+
+            <div class="event-name">
+                Pregón
+            </div>
+
+            <div class="event-info">
+                📅 Sábado 10 · 18:55<br>
+                📍 Ayuntamiento
+            </div>
+
+            <div class="buttons">
+                <button class="primary">⭐ Me interesa</button>
+               <button class="secondary" id="ver-evento-inicio">Ver evento</button>
+            </div>
+        </section>
+        <section class="card acceso-rapido">
+    <div class="card-title">Accesos rápidos</div>
+
+    <button class="acceso-boton" id="ir-mis-planes">
+        ⭐ Mis planes
+    </button>
+
+    <button class="acceso-boton" id="ir-cuadrillas">
+        🎉 Cuadrillas
+    </button>
+</section>
+
+        <section class="card">
+            <div class="card-title">Mis planes</div>
+
+            <div class="progress">
+                <div>
+                    <div class="event-name">0 eventos</div>
+                    <div class="event-info">
+                        Todavía no has añadido ningún plan.
+                    </div>
+                </div>
+
+                <div class="progress-number">⭐</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-title">Reto de lonjas</div>
+
+            <div class="progress">
+                <div>
+                    <div class="event-name">0 / 16</div>
+                    <div class="event-info">
+                        ¡Empieza a visitar las cuadrillas!
+                    </div>
+                </div>
+
+                <div class="progress-number">🏠</div>
+            </div>
+        </section>
+
+    </section>
+
+
+    <!-- ================================
+         PROGRAMA
+         ================================ -->
+
+    <section id="programa" class="pantalla">
+
+        <div class="welcome">
+            <h2>📅 Programa</h2>
+            <p>Todos tus eventos de San Fausto 2026.</p>
+        </div>
+
+        <div id="lista-eventos"></div>
+
+    </section>
+
+
+    <!-- ================================
+         MIS PLANES
+         ================================ -->
+
+    <section id="mis-planes" class="pantalla">
+
+        <div class="welcome">
+            <h2>⭐ Mis planes</h2>
+            <p>Los eventos que has marcado para no perderte.</p>
+        </div>
+
+        <div id="lista-mis-planes"></div>
+
+    </section>
+<section id="cuadrillas" class="pantalla">
+    <div class="cabecera-pantalla">
+        <h2>Cuadrillas</h2>
+        <p>Descubre las cuadrillas de San Fausto 💙</p>
+    </div>
+    <div id="lista-cuadrillas"></div>
+</section>
+<section id="perfil" class="pantalla">
+
+    <div class="cabecera-pantalla">
+        <h2>Perfil</h2>
+        <p>Personaliza tu experiencia en San Fausto 💙</p>
+    </div>
+
+    <div class="card perfil-card">
+
+        <h3>¿Cómo te llamas?</h3>
+
+        <p class="perfil-texto">
+            Introduce tu nombre para personalizar la app.
+        </p>
+
+        <input
+            type="text"
+            id="nombre-usuario"
+            placeholder="Tu nombre"
+        >
+
+        <button id="guardar-nombre">
+            Guardar
+        </button>
+
+        <p id="saludo-perfil"></p>
+
+    </div>
+
+</section>
+</main>
+
+    <nav>
+
+        <button class="active">
+            <span>🏠</span>
+            Inicio
+        </button>
+
+        <button>
+            <span>📅</span>
+            Programa
+        </button>
+
+        <button>
+            <span>⭐</span>
+            Mis planes
+        </button>
+
+        <button>
+            <span>🎉</span>
+            Cuadrillas
+        </button>
+
+        <button>
+            <span>👤</span>
+            Perfil
+        </button>
+
+    </nav>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
