@@ -728,25 +728,29 @@ function mostrarCuadrillas() {
         const tarjeta = document.createElement("div");
         tarjeta.className = "card cuadrilla-card";
 
-        tarjeta.innerHTML = `
-            <div class="evento-contenido">
-                <div class="evento-nombre">
-                    ${cuadrilla.nombre}
-                </div>
+       tarjeta.innerHTML = `
+    <div class="evento-contenido">
+        <div class="evento-nombre">
+            ${cuadrilla.nombre}
+        </div>
 
-                <div class="evento-lugar">
-    📍 ${cuadrilla.direccion}
-</div>
+        <div class="evento-lugar">
+            📍 ${cuadrilla.direccion}
+        </div>
+    </div>
 
-<button class="cuadrilla-visitada">
-    ☐ Visitada
-</button>
-            </div>
+    <div class="cuadrilla-botones">
 
-            <button class="cuadrilla-mapa">
-                📍
-            </button>
-        `;
+        <button class="cuadrilla-visitada">
+            ☐ Visitada
+        </button>
+
+        <button class="cuadrilla-mapa">
+            📍
+        </button>
+
+    </div>
+`;
 
         const botonMapa = tarjeta.querySelector(".cuadrilla-mapa");
 const botonVisitada = tarjeta.querySelector(".cuadrilla-visitada");
