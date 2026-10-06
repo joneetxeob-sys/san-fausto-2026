@@ -735,8 +735,12 @@ function mostrarCuadrillas() {
                 </div>
 
                 <div class="evento-lugar">
-                    📍 ${cuadrilla.direccion}
-                </div>
+    📍 ${cuadrilla.direccion}
+</div>
+
+<div class="cuadrilla-visitada">
+    ☐ Visitada
+</div>
             </div>
 
             <button class="cuadrilla-mapa">
