@@ -647,6 +647,15 @@ if (indice === 4) {
 // CUADRILLAS SAN FAUSTO 2026
 // ================================
 let cuadrillasVisitadas = JSON.parse(localStorage.getItem("cuadrillasVisitadas")) || [];
+function actualizarContadorCuadrillas() {
+
+    const contador = document.querySelector("#contador-cuadrillas");
+
+    if (contador) {
+        contador.textContent = cuadrillasVisitadas.length + " / 16";
+    }
+
+}
 const cuadrillas = [
     {
         nombre: "Edurre",
@@ -777,6 +786,7 @@ botonVisitada.addEventListener("click", function() {
         "cuadrillasVisitadas",
         JSON.stringify(cuadrillasVisitadas)
     );
+    actualizarContadorCuadrillas();
 
 });
         botonMapa.addEventListener("click", function() {
