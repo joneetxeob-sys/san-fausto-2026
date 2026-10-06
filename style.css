@@ -333,3 +333,22 @@ nav button.active {
     color: #666;
     font-size: 14px;
 }
+.cuadrilla-botones {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cuadrilla-visitada {
+    background: white;
+    color: #155E9A;
+    border: 1px solid #155E9A;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.cuadrilla-visitada:active {
+    transform: scale(0.95);
+}
