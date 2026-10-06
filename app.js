@@ -646,7 +646,7 @@ if (indice === 4) {
 // ================================
 // CUADRILLAS SAN FAUSTO 2026
 // ================================
-
+let cuadrillasVisitadas = JSON.parse(localStorage.getItem("cuadrillasVisitadas")) || [];
 const cuadrillas = [
     {
         nombre: "Edurre",
@@ -754,14 +754,29 @@ function mostrarCuadrillas() {
 
         const botonMapa = tarjeta.querySelector(".cuadrilla-mapa");
 const botonVisitada = tarjeta.querySelector(".cuadrilla-visitada");
-
+if (cuadrillasVisitadas.includes(cuadrilla.nombre)) {
+    botonVisitada.textContent = "✓ Visitada";
+}
 botonVisitada.addEventListener("click", function() {
 
-    if (botonVisitada.textContent.includes("☐")) {
+    const indice = cuadrillasVisitadas.indexOf(cuadrilla.nombre);
+
+    if (indice === -1) {
+
+        cuadrillasVisitadas.push(cuadrilla.nombre);
         botonVisitada.textContent = "✓ Visitada";
+
     } else {
+
+        cuadrillasVisitadas.splice(indice, 1);
         botonVisitada.textContent = "☐ Visitada";
+
     }
+
+    localStorage.setItem(
+        "cuadrillasVisitadas",
+        JSON.stringify(cuadrillasVisitadas)
+    );
 
 });
         botonMapa.addEventListener("click", function() {
