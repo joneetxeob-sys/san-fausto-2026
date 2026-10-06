@@ -622,8 +622,9 @@ botonesNav.forEach(function(boton, indice) {
 
 
         if (indice === 0) {
-            mostrarPantalla("inicio");
-        }
+    mostrarPantalla("inicio");
+    actualizarContadorCuadrillas();
+}
 
         if (indice === 1) {
             mostrarPantalla("programa");
