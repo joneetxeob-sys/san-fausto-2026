@@ -738,9 +738,9 @@ function mostrarCuadrillas() {
     📍 ${cuadrilla.direccion}
 </div>
 
-<div class="cuadrilla-visitada">
+<button class="cuadrilla-visitada">
     ☐ Visitada
-</div>
+</button>
             </div>
 
             <button class="cuadrilla-mapa">
@@ -749,7 +749,17 @@ function mostrarCuadrillas() {
         `;
 
         const botonMapa = tarjeta.querySelector(".cuadrilla-mapa");
+const botonVisitada = tarjeta.querySelector(".cuadrilla-visitada");
 
+botonVisitada.addEventListener("click", function() {
+
+    if (botonVisitada.textContent.includes("☐")) {
+        botonVisitada.textContent = "✓ Visitada";
+    } else {
+        botonVisitada.textContent = "☐ Visitada";
+    }
+
+});
         botonMapa.addEventListener("click", function() {
 
             const direccion = cuadrilla.direccion + ", Basauri, Bizkaia";
