@@ -782,9 +782,15 @@ tarjeta.innerHTML = `
 
 const selectorPuntuacion = tarjeta.querySelector(".selector-puntuacion");
 
-const puntuacionesCuadrillas = JSON.parse(
-    localStorage.getItem("puntuacionesCuadrillas")
-) || {};
+let puntuacionesCuadrillas = {};
+
+try {
+    puntuacionesCuadrillas = JSON.parse(
+        localStorage.getItem("puntuacionesCuadrillas")
+    ) || {};
+} catch (error) {
+    puntuacionesCuadrillas = {};
+}
 
 // Recuperar la puntuación guardada
 if (puntuacionesCuadrillas[cuadrilla.nombre]) {
