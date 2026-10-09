@@ -747,6 +747,20 @@ function mostrarCuadrillas() {
         <div class="evento-lugar">
             📍 ${cuadrilla.direccion}
         </div>
+        <div class="cuadrilla-puntuacion">
+            <label for="puntuacion-${cuadrilla.nombre}">
+            ⭐ Mi puntuación:
+            </label>
+
+            </select
+                id="puntuacion-${cuadrilla.nombre}"
+                class="selector-puntuacion"
+            >
+                <option value=" ">Sin puntuar</option>
+                ${Array.from({length: 10}, (_,i) => i + 1).map(n => `
+                    <option value="${n}/10</option>
+                `).join("")}
+            </select>
     </div>
 
     <div class="cuadrilla-botones">
