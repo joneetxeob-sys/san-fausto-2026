@@ -752,7 +752,7 @@ function mostrarCuadrillas() {
             ⭐ Mi puntuación:
             </label>
 
-            </select
+            <select
                 id="puntuacion-${cuadrilla.nombre}"
                 class="selector-puntuacion"
             >
