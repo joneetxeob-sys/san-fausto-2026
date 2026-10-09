@@ -758,7 +758,7 @@ function mostrarCuadrillas() {
             >
                 <option value=" ">Sin puntuar</option>
                 ${Array.from({length: 10}, (_,i) => i + 1).map(n => `
-                    <option value="${n}/10</option>
+                    <option value="${n}">${n}/10</option>
                 `).join("")}
             </select>
     </div>
