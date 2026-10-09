@@ -738,7 +738,8 @@ function mostrarCuadrillas() {
         const tarjeta = document.createElement("div");
         tarjeta.className = "card cuadrilla-card";
 
-       tarjeta.innerHTML = `
+       
+tarjeta.innerHTML = `
     <div class="evento-contenido">
         <div class="evento-nombre">
             ${cuadrilla.nombre}
@@ -747,24 +748,25 @@ function mostrarCuadrillas() {
         <div class="evento-lugar">
             📍 ${cuadrilla.direccion}
         </div>
+
         <div class="cuadrilla-puntuacion">
             <label for="puntuacion-${cuadrilla.nombre}">
-            ⭐ Mi puntuación:
+                ⭐ Mi puntuación:
             </label>
 
             <select
                 id="puntuacion-${cuadrilla.nombre}"
                 class="selector-puntuacion"
             >
-                <option value=" ">Sin puntuar</option>
-                ${Array.from({length: 10}, (_,i) => i + 1).map(n => `
+                <option value="">Sin puntuar</option>
+                ${Array.from({length: 10}, (_, i) => i + 1).map(n => `
                     <option value="${n}">${n}/10</option>
                 `).join("")}
             </select>
+        </div>
     </div>
 
     <div class="cuadrilla-botones">
-
         <button class="cuadrilla-visitada">
             ☐ Visitada
         </button>
@@ -772,9 +774,9 @@ function mostrarCuadrillas() {
         <button class="cuadrilla-mapa">
             📍
         </button>
-
     </div>
 `;
+
 
         const botonMapa = tarjeta.querySelector(".cuadrilla-mapa");
 const botonVisitada = tarjeta.querySelector(".cuadrilla-visitada");
