@@ -779,6 +779,32 @@ tarjeta.innerHTML = `
 
 
         const botonMapa = tarjeta.querySelector(".cuadrilla-mapa");
+
+const selectorPuntuacion = tarjeta.querySelector(".selector-puntuacion");
+
+const puntuacionesCuadrillas = JSON.parse(
+    localStorage.getItem("puntuacionesCuadrillas")
+) || {};
+
+// Recuperar la puntuación guardada
+if (puntuacionesCuadrillas[cuadrilla.nombre]) {
+    selectorPuntuacion.value = puntuacionesCuadrillas[cuadrilla.nombre];
+}
+
+// Guardar la puntuación al cambiarla
+selectorPuntuacion.addEventListener("change", function() {
+    if (selectorPuntuacion.value === "") {
+        delete puntuacionesCuadrillas[cuadrilla.nombre];
+    } else {
+        puntuacionesCuadrillas[cuadrilla.nombre] = selectorPuntuacion.value;
+    }
+
+    localStorage.setItem(
+        "puntuacionesCuadrillas",
+        JSON.stringify(puntuacionesCuadrillas)
+    );
+});
+
 const botonVisitada = tarjeta.querySelector(".cuadrilla-visitada");
 if (cuadrillasVisitadas.includes(cuadrilla.nombre)) {
     botonVisitada.textContent = "✓ Visitada";
